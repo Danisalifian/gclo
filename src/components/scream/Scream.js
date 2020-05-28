@@ -19,6 +19,9 @@ import ChatIcon from '@material-ui/icons/Chat'
 import {connect} from 'react-redux'
 
 const styles =  () => ({
+    typography:{
+        fontFamily: 'Gilroy'
+    },
     card: {
         position:'relative',
         display: 'flex',
@@ -60,7 +63,7 @@ class Scream extends Component {
           ) : null;
 
         return (
-            <Card className={classes.card}>
+            <Card className={classes.card} elevation={5}>
                 <CardMedia
                     image={userImage}
                     title="Profile image"
@@ -72,6 +75,7 @@ class Scream extends Component {
                         component={Link}
                         to={`/users/${userHandle}`}
                         color="primary"
+                        className={classes.typography}
                         >
                         {userHandle}
                     </Typography>

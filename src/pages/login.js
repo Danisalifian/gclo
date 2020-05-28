@@ -58,15 +58,15 @@ class login extends Component {
             <Grid container className={classes.form}>
                 <Grid item sm></Grid>
                 <Grid item sm>
-                    <img src={AppIcon} alt="geco" className={classes.image}/>
-                    <Typography variant="h2" className={classes.pageTitle}>
-                        Login
+                    <img src={AppIcon} alt="geco" className={classes.brandImage}/>
+                    <Typography variant="h5" className={classes.pageTitle}>
+                        Log in
                     </Typography>
                     <form noValidate onSubmit={this.handleSubmit}>
                         <TextField id="email" name="email" type="email" label="Email" className={classes.textField}
                             helperText={errors.email} error={errors.email ? true: false} value={this.state.email} 
                             onChange={this.handleChange} fullWidth/>
-                        <TextField id="password" name="password" type="password" label="password" className={classes.textField}
+                        <TextField id="password" name="password" type="password" label="Password" className={classes.textField}
                             helperText={errors.password} error={errors.password ? true: false} value={this.state.password}
                             onChange={this.handleChange} fullWidth/>
                         {errors.general && (
@@ -74,9 +74,9 @@ class login extends Component {
                                 {errors.general}
                             </Typography>
                         )}
-                        <Button type="submit" variant="contained" color="primary" className={classes.button}
-                            disabled={loading}>
-                            Login
+                        <Button type="submit" variant="outlined" color="primary" className={classes.button}
+                            disabled={loading} style={{borderRadius: '60px', width: 'auto', height: 30, textTransform: 'none'}}>
+                            Log in
                             {loading && (
                                 <CircularProgress size={30} className={classes.progress} />
                             )}

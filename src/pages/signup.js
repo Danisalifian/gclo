@@ -64,9 +64,9 @@ class signup extends Component {
             <Grid container className={classes.form}>
                 <Grid item sm></Grid>
                 <Grid item sm>
-                    <img src={AppIcon} alt="geco" className={classes.image}/>
-                    <Typography variant="h2" className={classes.pageTitle}>
-                        Signup
+                    <img src={AppIcon} alt="geco" className={classes.brandImage}/>
+                    <Typography variant="h5" className={classes.pageTitle}>
+                        Sign up
                     </Typography>
                     <form noValidate onSubmit={this.handleSubmit}>
                         <TextField 
@@ -119,8 +119,8 @@ class signup extends Component {
                             </Typography>
                         )}
                         <Button type="submit" variant="contained" color="primary" className={classes.button}
-                            disabled={loading}>
-                            Signup
+                            disabled={loading} style={{borderRadius: '60px', width: 'auto', height: 30, textTransform: 'none' }}>
+                            Sign up
                             {loading && (
                                 <CircularProgress size={30} className={classes.progress} />
                             )}

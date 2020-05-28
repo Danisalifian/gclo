@@ -23,8 +23,14 @@ export default {
         image: {
             margin: '20px auto 20px auto'
         },
+        brandImage: {
+          maxWidth: '40%',
+          height: 'auto',
+          margin: '20px auto 20px auto'
+        },
         pageTitle: {
-            margin: '10px auto 10px auto'
+            margin: '10px auto 10px auto',
+            color: '#605072'
         },
         textField: {
             margin: '10px auto 10px auto'

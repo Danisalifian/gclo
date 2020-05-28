@@ -97,16 +97,20 @@ class Profile extends Component {
                 </div>
             </Paper>
         ) : (
-            <Paper className={classes.paper}>
-                <Typography variant="body2" align="center">
-                    No profile found, please login again
-                </Typography>
+            <Paper className={classes.paper} elevation={7}>
+                <h2 align="left">
+                    New to gclo?
+                </h2>
+                <p align="left" style={{color: '#605072'}}>
+                    Sign up now to get your own personalized timeline!
+                </p>
                 <div className={classes.buttons}>
-                    <Button variant="contained" color="primary" component={Link} to="/login">
+                    {/* <Button variant="contained" color="primary" component={Link} to="/login">
                         Login
-                    </Button>
-                    <Button variant="contained" color="secondary" component={Link} to="/signup">
-                        Signup
+                    </Button> */}
+                    <Button variant="contained" color="primary" component={Link} to="/signup"
+                        style={{borderRadius: '60px', width: '100%', height: 35, textTransform: 'none' }}>
+                        <p>Sign up</p>
                     </Button>
                 </div>
             </Paper>
